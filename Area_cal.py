@@ -2,10 +2,13 @@ from tkinter import *
 
 window = Tk()
 window.title("Area of Triangle")
-window.geometry('300x300')
+window.geometry('500x300')
+window.config(bg='pink')
+
 
 label1 = Label(window, text='Enter Height')
-label1.config(fg='blue')
+label1.config(fg='black')
+label1.config(bg='pink')
 label1.config(font=('Arial', 14))
 label1.grid(row=0, column=0, padx=5, pady=10)
 '''Storing the label1 data into data1'''
@@ -17,7 +20,8 @@ textbox1.config(font=('Arial', 10))
 textbox1.grid(row=0, column=1)
 
 label2 = Label(window, text='Enter Breadth')
-label2.config(fg='blue')
+label2.config(fg='black')
+label2.config(bg='pink')
 label2.config(font=('Arial', 14))
 label2.grid(row=1, column=0, padx=5, pady=10)
 
@@ -34,7 +38,7 @@ textbox2.grid(row=1, column=1)
 
 
 def click():
-    if height > 0 and breadth > 0:
+    if height.get() > 0 and breadth.get() > 0:
         emptylabel.config(text='Height:' + str(height.get()))
         emptylabel2.config(text='Base:' + str(breadth.get()))
         area = 0.5 * height.get() * breadth.get()
@@ -54,18 +58,21 @@ button.config(command=click)
 '''creating a empty label to show the output'''
 emptylabel = Label(window)
 emptylabel.config(fg='green')
+emptylabel.config(bg='pink')
 emptylabel.config(font=('Arial', 10, 'bold'))
 emptylabel.grid(row=3, column=1, sticky=W)
 
 '''creating a empty label2 to show the output'''
 emptylabel2 = Label(window)
 emptylabel2.config(fg='green')
+emptylabel2.config(bg='pink')
 emptylabel2.config(font=('Arial', 10, 'bold'))
 emptylabel2.grid(row=4, column=1, sticky=W)
 
 '''creating a empty label2 to show the output'''
 emptylabel3 = Label(window)
 emptylabel3.config(fg='green')
+emptylabel3.config(bg='pink')
 emptylabel3.config(font=('Arial', 10, 'bold'))
 emptylabel3.grid(row=5, column=1, sticky=W)
 
