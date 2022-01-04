@@ -34,10 +34,13 @@ textbox2.grid(row=1, column=1)
 
 
 def click():
-    emptylabel.config(text='Height:' + str(height.get()))
-    emptylabel2.config(text='Base:' + str(breadth.get()))
-    area = 0.5 * height.get() * breadth.get()
-    emptylabel3.config(text='Area : ' + str(area))
+    if height > 0 and breadth > 0:
+        emptylabel.config(text='Height:' + str(height.get()))
+        emptylabel2.config(text='Base:' + str(breadth.get()))
+        area = 0.5 * height.get() * breadth.get()
+        emptylabel3.config(text='Area : ' + str(area))
+    else:
+        emptylabel3.config(text='Please enter height and breadth and click on calculate')
 
 
 '''Function for a Button'''
